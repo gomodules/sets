@@ -25,9 +25,12 @@ type ReferenceSetTypes struct {
 	// These types all cause files to be generated.
 	// These types should be reflected in the output of
 	// the "//pkg/util/sets:set-gen" genrule.
-	a int64
-	b int
-	c byte
-	d string
-	e int32
+	a int
+	b int64
+	c int32
+	d byte
+	e string
+	f uint
+	g uint64
+	h uint32
 }
