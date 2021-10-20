@@ -3,7 +3,7 @@ module gomodules.xyz/sets/kubernetes
 go 1.17
 
 require (
-	gomodules.xyz/sets v0.2.0
+	gomodules.xyz/sets v0.2.1
 	k8s.io/apimachinery v0.21.1
 )
 
