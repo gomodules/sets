@@ -5,6 +5,12 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+concurrency:
+  group: '${{ github.head_ref || github.ref }}'
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -22,11 +28,7 @@ jobs:
       - name: Build
         run: |
           go build -v ./...
-          cd kubernetes
-          go build -v ./...
 
       - name: Test
         run: |
-          go test -v ./...
-          cd kubernetes
           go test -v ./...
